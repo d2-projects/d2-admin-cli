@@ -1,10 +1,11 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.VERSION = undefined;
+exports.VERSION = void 0;
 
-var _package = require('../../package.json');
+var _package = require("../../package.json");
 
-var VERSION = exports.VERSION = _package.version;
+var VERSION = _package.version;
+exports.VERSION = VERSION;

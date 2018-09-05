@@ -1,14 +1,8 @@
 {
   "presets": [
-    "env",
-    "react",
-    "stage-0"
+    "@babel/preset-env"
   ],
   "plugins": [
-    "transform-runtime",
-    "transform-class-properties",
-    "transform-decorators",
-    "transform-react-constant-elements",
-    "transform-react-inline-elements"
+    "@babel/plugin-transform-runtime"
   ]
 }

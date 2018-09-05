@@ -1,41 +1,36 @@
-'use strict';
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = void 0;
 
-var _regenerator = require('babel-runtime/regenerator');
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
-var _regenerator2 = _interopRequireDefault(_regenerator);
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
-var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
+var _ora = _interopRequireDefault(require("ora"));
 
-var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+var _inquirer = _interopRequireDefault(require("inquirer"));
 
-var _ora = require('ora');
+var _downloadGitRepo = _interopRequireDefault(require("download-git-repo"));
 
-var _ora2 = _interopRequireDefault(_ora);
-
-var _inquirer = require('inquirer');
-
-var _inquirer2 = _interopRequireDefault(_inquirer);
-
-var _downloadGitRepo = require('download-git-repo');
-
-var _downloadGitRepo2 = _interopRequireDefault(_downloadGitRepo);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var create = function () {
-  var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+var create =
+/*#__PURE__*/
+function () {
+  var _ref = (0, _asyncToGenerator2.default)(
+  /*#__PURE__*/
+  _regenerator.default.mark(function _callee() {
     var loading, answer, project, templateName;
-    return _regenerator2.default.wrap(function _callee$(_context) {
+    return _regenerator.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            loading = (0, _ora2.default)('模板拉取中...');
+            loading = (0, _ora.default)('模板拉取中...');
             _context.next = 3;
-            return _inquirer2.default.prompt([{
+            return _inquirer.default.prompt([{
               type: 'input',
               name: 'projectName',
               message: '项目名称',
@@ -52,14 +47,13 @@ var create = function () {
             answer = _context.sent;
             project = answer.projectName;
             templateName = answer.projectType === '完整版' ? 'd2-projects/d2-admin' : 'd2-projects/d2-admin-start-kit';
-
             loading.start();
-
-            (0, _downloadGitRepo2.default)(templateName, process.cwd() + '/' + project, function (err) {
+            (0, _downloadGitRepo.default)(templateName, process.cwd() + '/' + project, function (err) {
               if (err) {
                 console.log(err);
                 return;
               }
+
               console.log(process.cwd() + '/' + project);
               loading.succeed();
               console.log('');
@@ -67,17 +61,17 @@ var create = function () {
               console.log('');
               console.log('请使用以下命令启动项目：');
               console.group('');
-              console.log('cd ' + project);
+              console.log("cd ".concat(project));
               console.log('npm install');
               console.log('npm run serve');
             });
 
           case 8:
-          case 'end':
+          case "end":
             return _context.stop();
         }
       }
-    }, _callee, undefined);
+    }, _callee, this);
   }));
 
   return function create() {
@@ -85,4 +79,5 @@ var create = function () {
   };
 }();
 
-exports.default = create;
+var _default = create;
+exports.default = _default;
