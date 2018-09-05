@@ -1,6 +1,6 @@
 {
   "name": "@d2-admin/d2-admin-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "d2-admin-cli",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "watch": "npm run compile -- --watch"
   },
   "bin": {
-    "d2-admin": "./bin/www"
+    "d2": "./bin/www"
   },
   "repository": {
     "type": "git",

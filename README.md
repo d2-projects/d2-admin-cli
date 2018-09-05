@@ -15,7 +15,10 @@ yarn global add @d2-admin/d2-admin-cli
 ## 创建项目
 进入想要创建项目的文件夹，运行以下命令来创建一个新项目：
 ``` sh
-d2-admin create
+d2 create
+
+# 或者
+d2 c
 ```
 ### 项目名称
 项目名称即所要创建项目的文件夹名称，默认为 `d2-admin-demo`。
@@ -27,5 +30,8 @@ d2-admin create
 ## 查看 `D2 Admin` 文档
 运行以下命令:
 ``` sh
-d2-admin doc
+d2 doc
+
+# 或者
+d2 d
 ```
