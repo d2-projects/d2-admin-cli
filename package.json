@@ -1,6 +1,6 @@
 {
   "name": "@d2-admin/d2-admin-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "d2-admin-cli",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,7 @@
     "babel-plugin-transform-runtime": "^6.23.0"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "commander": "^2.17.1",
     "download-git-repo": "^1.1.0",
     "inquirer": "^6.2.0",
