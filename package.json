@@ -1,0 +1,40 @@
+{
+  "name": "d2-admin-cli",
+  "version": "1.0.0",
+  "description": "d2-admin-cli",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "watch": "npm run compile -- --watch"
+  },
+  "bin": {
+    "d2-admin": "./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d2-projects/d2-admin-cli.git"
+  },
+  "keywords": [
+    "d2-admin-cli",
+    "d2-admin",
+    "d2-projects",
+    "vue"
+  ],
+  "author": "孙昊翔 <673686754@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d2-projects/d2-admin-cli/issues"
+  },
+  "homepage": "https://github.com/d2-projects/d2-admin-cli#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
+  "dependencies": {
+    "commander": "^2.17.1",
+    "download-git-repo": "^1.1.0",
+    "inquirer": "^6.2.0",
+    "ora": "^3.0.0"
+  }
+}
