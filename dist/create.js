@@ -40,13 +40,13 @@ function () {
               name: 'projectType',
               message: '项目模板',
               choices: ['完整版（包含所有插件和示例代码）', '简化版（不包含非必须插件和组件，保留所有系统功能）'],
-              default: '完整版'
+              default: '完整版（包含所有插件和示例代码）'
             }]);
 
           case 3:
             answer = _context.sent;
             project = answer.projectName;
-            templateName = answer.projectType === '完整版' ? 'd2-projects/d2-admin' : 'd2-projects/d2-admin-start-kit';
+            templateName = answer.projectType === '完整版（包含所有插件和示例代码）' ? 'd2-projects/d2-admin' : 'd2-projects/d2-admin-start-kit';
             loading.start();
             (0, _downloadGitRepo.default)(templateName, process.cwd() + '/' + project, function (err) {
               if (err) {

@@ -16,12 +16,12 @@ let create = async () => {
         name: 'projectType',
         message: '项目模板',
         choices: ['完整版（包含所有插件和示例代码）', '简化版（不包含非必须插件和组件，保留所有系统功能）'],
-        default: '完整版'
+        default: '完整版（包含所有插件和示例代码）'
       }
     ])
 
     let project = answer.projectName
-    let templateName = answer.projectType === '完整版' ? 'd2-projects/d2-admin' : 'd2-projects/d2-admin-start-kit'
+    let templateName = answer.projectType === '完整版（包含所有插件和示例代码）' ? 'd2-projects/d2-admin' : 'd2-projects/d2-admin-start-kit'
     loading.start()
 
     downLoadGit(templateName, process.cwd() + '/' + project, (err) => {  

@@ -1,6 +1,6 @@
 {
   "name": "@d2-admin/d2-admin-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "d2-admin-cli",
   "main": "index.js",
   "scripts": {
