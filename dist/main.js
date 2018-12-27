@@ -13,8 +13,7 @@ _commander.default.command('create').description('create d2-admin template').ali
 });
 
 _commander.default.command('doc').description('d2-admin doc').alias('d').action(function () {
-  console.log('Document: https://d2-projects.github.io/d2-admin-doc/');
-  console.log('中文文档: https://d2-projects.github.io/d2-admin-doc/zh/');
+  console.log('文档: https://doc.d2admin.fairyever.com/zh/');
 });
 
 _commander.default.version(_constants.VERSION, '-v --version').parse(process.argv);

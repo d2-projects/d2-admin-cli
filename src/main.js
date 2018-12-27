@@ -13,8 +13,7 @@ program.command('doc')
   .description('d2-admin doc')
   .alias('d')
   .action(() => {
-    console.log('Document: https://d2-projects.github.io/d2-admin-doc/')
-    console.log('中文文档: https://d2-projects.github.io/d2-admin-doc/zh/')
+    console.log('文档: https://doc.d2admin.fairyever.com/zh/')
   })
 
 program.version(VERSION,'-v --version').parse(process.argv)
